@@ -1,0 +1,56 @@
+.counter
+{
+    border: 3px solid rgb(86, 106, 170);
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+}
+
+.screen
+{
+    background-color: rgb(192, 215, 228);
+    font-size: 2rem;
+    width: 100%;
+    border-radius: 1em;
+}
+.button-group
+{
+    padding-top: .5em;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    /* align-items: ; */
+}
+button{
+    flex-basis: 5em;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+   
+}
+button::after
+{
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: cadetblue;
+    transition: width .9s ;
+}
+button:hover::after
+{
+    width: 100%;
+}
+.b1:hover::after
+{
+    content: "+";
+}
+.b2:hover::after
+{
+    content: "-";
+}
