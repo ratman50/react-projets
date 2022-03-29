@@ -1,0 +1,55 @@
+.Temperature
+{
+    background-color: darkcyan;
+    box-shadow: 9px 9px 8px rgba(0, 0, 0, .5);
+    width: 10em;
+    height: 14em;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+
+}
+
+.screen
+{
+    width: 5em;
+    height: 50%;
+    padding-top: 1.4em;
+    font-size: 2rem;
+    border: 3px solid white;
+    border-radius: 50%;
+    
+}
+.cold
+{
+    background-color: dodgerblue;
+
+}
+.red
+{
+    background-color: rgba(211, 12, 12, 0.61);
+}
+.hot
+{
+    background-color: red;
+}
+.button-group
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+button
+{
+    font-size: 2.3rem;
+    cursor: pointer;
+    color: white;
+    background-color: gray;
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid white;
+    border-radius: 50%;
+}
