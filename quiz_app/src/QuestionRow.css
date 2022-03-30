@@ -1,0 +1,13 @@
+
+.row
+{
+    border: 3px solid #2b4362;
+    width: 100%;
+    border-radius: 12em;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.row:hover
+{
+    background: #2b4362;
+}

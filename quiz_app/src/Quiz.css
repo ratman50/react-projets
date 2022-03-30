@@ -1,0 +1,20 @@
+.quiz
+{
+    display: flex;
+    width: 38%;
+    background-color: #262d4a;
+    height: 40%;
+    padding: 1em;
+    border-radius: 1em;
+    color: white;
+    box-shadow: 1em 1em 10px rgba(10, 10, 10, 0.226);
+}
+
+.option-group
+{
+    width: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 1em;
+}
