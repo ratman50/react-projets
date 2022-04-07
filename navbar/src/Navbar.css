@@ -1,0 +1,132 @@
+*
+{
+    list-style: none;
+    text-decoration: none;
+    border: none;
+}
+.navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: relative; */
+    padding: 0em 2em;
+    color: white;
+    background-color: rgba(27, 27, 204, 0.61);
+}
+.nav__menu
+{
+    background-color: transparent;
+    cursor:pointer;
+    display:none
+}
+.link   
+{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.nav
+{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+
+}
+.nav__link
+{
+    color: white;
+    padding: .6em;
+    border-radius: 1em;
+}
+.nav__link:hover
+{
+    background-color: rgba(27, 27, 204, 0.1);
+
+}
+.sign-up
+{
+    padding: .5em 1em;
+    background-color: rgb(9, 180, 157);
+    border: none;
+    color: white;
+    border-radius: .5em;
+    cursor: pointer;
+}
+
+.sign-up:hover
+{
+    background-color: white;
+    color:black;
+}
+.nav_close
+    {
+        background-color: transparent;
+        border-radius: 50%;
+        padding: .3em;
+        border: 2px solid transparent;
+        position: absolute;
+        top:0em;
+        right:2.3em;
+        display:none;
+    }
+
+    .nav_close:hover
+    {
+        border-color: brown;
+        color: red;
+        
+}
+
+.close
+{
+    background-color: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+}
+@media screen and (max-width:834px) {
+    .link
+    {
+        position: absolute;
+        display: none;
+    }
+    .nav__menu
+    {
+        display: block;
+    }
+    
+    .link_small
+    {
+        top:0;
+        left: 0;
+        display: flex;
+         justify-content: center;
+        align-items: center; 
+        gap: 3rem;
+        width: 100vw;
+        height: 50vh;
+        padding-top: 4em;
+        flex-direction: column;
+        background-color:rgb(27, 27, 204,.5);
+
+    }
+    .nav_small
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.3rem;
+        width: 100%;
+
+    }
+    .nav_close
+    {
+        display: block;
+    }
+
+}
