@@ -1,6 +1,7 @@
 import {  useEffect, useState } from 'react';
 import './App.css';
 import { checkContext } from './checkContext';
+import { deleteContext } from './deleteContext';
 import Forms from './components/Forms';
 import TodoList from './components/TodoList';
 
@@ -10,16 +11,17 @@ function App() {
   const [inputText, setInputText]=useState("");
   const [list, setList]=useState([]);
   const [option,setOption]=useState(null);
-
+  const [del, setDelete]=useState(0);
   function  handleList(e) {
     e.preventDefault();
     if(inputText)
     {
       const data={
         text: inputText,
-        date: new Date().getDate(),
+        date: new Date().getDate()+"/"+new Date().getMonth()+"/"+new Date().getFullYear() + " | "+new Date().getHours()+":"+new Date().getMinutes()+"."+new Date().getSeconds(),
         stat:false,
-        id:Math.round(Math.random()*1000)
+        id:Math.round(Math.random()*1000),
+        del:false
       };
       setList((prevList) => [...prevList,data]);
       setInputText("");
@@ -54,15 +56,27 @@ function App() {
         break;
     }
   }
+  function handleDelete(e) {
+    const id=parseInt(e.target.id);
+    const ind=list.findIndex(item=>item.id==id);
+    let cpy=[...list];
+    cpy.splice(ind,1);
+    console.log(id);
+    setList(cpy);
+    setDelete(id);
+  }
   useEffect(()=>{
 
    
-  },[option])
+  },[option, del])
   return (
     <div className="App">
         <Forms handleText={handleText} handleList={handleList}  inputText={inputText} handleOption={handleOption}/>  
         <checkContext.Provider value={handleCheck}>
-            <TodoList list={list} option={option}/>
+            <deleteContext.Provider value={handleDelete}>
+              <TodoList list={list} option={option}/>
+
+            </deleteContext.Provider>
         </checkContext.Provider>
     </div>
   );
