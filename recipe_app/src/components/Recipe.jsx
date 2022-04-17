@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import Ingredient from './Ingredient';
 const Recipe = (props) => {
     const {label,calories,image,ingredientLines}=props.item;

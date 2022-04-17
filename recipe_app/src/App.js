@@ -10,7 +10,6 @@ function App() {
   const [valSearch, setValSearch] = useState("egg");
   const [isSearch, setIsSearch] = useState(false);
  
-  const [status, setStatus] = useState(true)
   function handleValSearch(e) {
     const value=e.target.value.toLowerCase();
     setValSearch(value);
@@ -18,6 +17,7 @@ function App() {
   useEffect(()=>{
    getRecipes();
    setIsSearch(false);
+   
   },[isSearch])
   const getRecipes=async ()=>{
     const request=`https://api.edamam.com/search?q=${valSearch}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=30`;
@@ -31,8 +31,11 @@ function App() {
         setRecipe(data);
     }
     else
+    {
       setRecipe([]);
-    console.log(recipe);
+    }
+   
+    
   }
   function handleSubmit(e) {
     e.preventDefault();
@@ -45,11 +48,14 @@ function App() {
           <div className="container">
 
             <input type="text" onChange={handleValSearch} value={valSearch} className='searchbar'  />
-            <button type="submit" ><FcSearch style={{fontSize:"2rem",backgroundColor:"white"}}/> </button>
+            <button type="submit" ><FcSearch className='fcsearch'/> </button>
           </div>
       </form>
-      <div className="search_result">
-        {recipe.map((item, index)=><Recipe key={`r${index}`} item={item.recipe}/>)}
+
+       <div className="search_result">
+      { recipe.length==0 ? <h1>NOT FOUND</h1>:
+        recipe.map((item, index)=><Recipe key={`r${index}`} item={item.recipe}/>)
+      }
       </div>
       
     </div>
