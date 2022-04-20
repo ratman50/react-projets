@@ -1,0 +1,99 @@
+.App {
+  text-align: center;
+  
+  padding-top:3em ;
+}
+body
+{
+  height:100%;
+  width: 100%;
+  background-color: #92acbeb0;
+}
+.container
+{
+  max-width: 250px;
+  border-radius: 1em;
+  padding: .5em;
+  background-color: #e75a51;
+  margin: 0 auto;
+  box-shadow: 2px 2px 7px black;
+}
+.add__text
+{
+  font-size: 1.2rem;
+  border: none;
+  color:#e75a51 ;
+  background-color: transparent;
+  outline: none;
+}
+.add
+{
+  background-color: #f7b9b4;
+  display: flex;
+  justify-content: space-between;
+  padding: .3em;
+  border-radius: .3em;
+}
+.plus
+{
+  color: #e75a51;
+}
+.total
+{
+  border-top:1px solid #f7b9b4 ;
+  text-align: right;
+  color: white;
+}
+
+.items
+{
+  padding: 1em 0;
+
+}
+.completed
+{
+  text-decoration: line-through;
+}
+.item
+{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 1.1rem;
+  padding:.4em 0;
+}
+.item__name
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.completed, .uncompleted
+{
+  padding-left: .2em;
+}
+
+.item__quantity
+{
+  /* padding: .3em; */
+  background-color: white;
+  border-radius: 1em;
+  flex: 0 1 auto;
+  
+}
+.btn_plus, .btn_less
+{
+  border: none;
+  color: #e75a51;
+  background-color:transparent;
+  cursor: pointer;
+  
+}
+.number
+{
+  color: #e75a51;
+  background-color: white;
+  padding: 0 .2em;
+  /* font-size: 1.3rem; */
+  box-sizing: content-box;
+}
