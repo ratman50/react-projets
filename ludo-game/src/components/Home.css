@@ -1,0 +1,47 @@
+.home__container
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.615);
+    display: flex;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+.home__title
+{
+    text-align:center;
+}
+.home__option
+{
+    background-color: rgba(105, 105, 105, 0.73);
+    border-radius: 1em;
+    padding: .3em;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.choice
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap : .3em
+}
+
+.choice_validate
+{
+    background-color: lightblue;
+    font-size: 1.2rem;
+    padding: .6em;
+    border-radius: 1em;
+    cursor: pointer;
+}

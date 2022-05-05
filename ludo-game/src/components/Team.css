@@ -1,0 +1,50 @@
+.Team-one
+{
+    grid-area: 1/1/7/7;
+}
+
+.Team-two
+{
+  grid-area: 1/10/7/16;
+}
+.Team-three
+{
+  grid-area: 10/1/16/7;
+}
+.Team-four
+{
+  grid-area: 10/10/16/16;
+}
+.Team__container
+{
+    /* padding: 1em;
+    background-color: white; */
+    grid-area: 2/2/6/6;
+    border:1px solid;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20%;
+    gap: .5em;
+}
+.circle
+{
+  border: 1px solid;
+  width: 42.8%;
+  border-radius: 50%;
+  height: 42.8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle.green
+{
+  background-color:#00750d;
+}
+.team{
+  display:grid;
+  grid-template: repeat(6 ,1fr) / repeat(6,1fr);
+}

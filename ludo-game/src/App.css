@@ -1,0 +1,50 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  border: none;
+  outline: none;
+}
+body
+{
+  height: 100%;
+  width: 100%;
+}
+
+.App
+{
+  height:100vh;
+  width: 100vw;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+
+}
+
+.container
+{
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  width: 35em;
+  height: 35em;
+  position: relative;
+}
+.green
+{
+  background-color: #00750d;
+}
+.yellow
+{
+  background-color:#f9c91e ;
+}
+.blue
+{
+  background-color: #00a7e8;
+}
+.red  
+{
+  background-color: #fe0000;
+}
